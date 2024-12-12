@@ -1,0 +1,109 @@
+:root {
+
+    --cord: #444;
+
+    --bulb-on: #ffc107;
+
+    --bulb-off: #ddd;
+
+    --background: #2b2b2b;
+
+}
+
+body {
+
+    margin: 0;
+
+    height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background: var(--background);
+
+}
+
+.toggle-scene {
+
+    position: relative;
+
+    height: 50vmin;
+
+    overflow: visible !important;
+
+}
+
+.toggle-scene__cord {
+
+    position: absolute;
+
+    top: 0;
+
+    left: 50%;
+
+    width: 4px;
+
+    height: 100px;
+
+    background: var(--cord);
+
+    cursor: pointer;
+
+    transform: translateX(-50%);
+
+}
+
+.bulb {
+
+    position: relative;
+
+    margin: 0 auto;
+
+    width: 100px;
+
+    height: 150px;
+
+    background: var(--bulb-off);
+
+    border-radius: 50% 50% 0 0;
+
+    border: 5px solid #333;
+
+    transform: translateY(100px);
+
+    box-shadow: 0 0 15px 2px var(--bulb-off);
+
+    transition: background 0.3s, box-shadow 0.3s;
+
+}
+
+.filament {
+
+    position: absolute;
+
+    top: 50%;
+
+    left: 50%;
+
+    width: 20px;
+
+    height: 20px;
+
+    border: 3px solid #333;
+
+    border-radius: 50%;
+
+    transform: translate(-50%, -50%);
+
+}
+
+.bulb.on {
+
+    background: var(--bulb-on);
+
+    box-shadow: 0 0 30px 10px var(--bulb-on);
+
+}
